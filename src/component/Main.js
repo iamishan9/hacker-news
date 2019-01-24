@@ -1,6 +1,7 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route , Switch  } from 'react-router-dom';
 
+import Comment from './Comment';
 import TopStories from './TopStories';
 
 import ROUTES from '../routes/routes';
@@ -14,7 +15,10 @@ import '../App.css';
 const Main = () => {
   return (
     <div className="main ">
-      <Route exact path={ROUTES.ROOT} component={TopStories} />
+      <Switch>
+        <Route exact path={ROUTES.ROOT} component={TopStories} />
+        <Route path ={"/:id"} component={props => <Comment {...props} />} />
+      </Switch> 
     </div>
   );
 };

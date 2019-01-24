@@ -36,3 +36,10 @@ export const getItem = id => {
 export const STORY_TYPE = {
   TOP_STORIES: 'topstories'
 };
+
+
+export async function getComments( commentId) {
+  const newsData = await axios.get(`${BASE_URL}item/${commentId}.json`);
+
+  return Promise.resolve(newsData);
+}

@@ -15,7 +15,7 @@ import '../App.css';
  */
 class ListItem extends Component {
   /**
-   * Creates an instance of ListItem.
+   * Instance of ListItem.
    *
    * @param {object} props
    * @memberof ListItem
@@ -24,14 +24,8 @@ class ListItem extends Component {
     super(props);
 
     this.state = {
-      id: this.props.id,
-      position: this.props.position,
-      by: undefined,
-      url: undefined,
-      score: undefined,
-      title: undefined,
-      descendants: undefined,
-
+      data:{},
+      position:this.props.position,
       idLoaded: false
     };
   }
@@ -42,15 +36,9 @@ class ListItem extends Component {
    * @memberof ListItem
    */
   componentDidMount = async () => {
-    const data = await getItem(this.state.id);
-
+    const data = await getItem(this.props.id);
     this.setState({
-      by: data.by,
-      id: data.id,
-      url: data.url,
-      score: data.score,
-      title: data.title,
-      descendants: data.descendants,
+      data,
 
       idLoaded: true
     });
@@ -66,6 +54,7 @@ class ListItem extends Component {
     return !this.state.idLoaded ? (
       <Spinner />
     ) : (
+      
       <div className="post-item clearfix">
         <div className="post-left left clearfix">
           <div className="left post-position">{this.state.position}.</div>
@@ -73,20 +62,27 @@ class ListItem extends Component {
         <div className="left post-right clearfix">
           <div className="post-top-section clearfix">
             <div className="left post-title">
-              <a href={this.state.url}>{this.state.title}</a>
+              <a href={this.state.data.url}>{this.state.data.title}</a>
             </div>
           </div>
 
           <div className="post-bottom-section clearfix">
-            <div className="post-points left">{this.state.score} points</div>
+            <div className="post-points left">{this.state.data.score} points</div>
 
             <div className="post-by left">
               By
-              <Link to="#"> {this.state.by}</Link>
+              <Link to="#"> {this.state.data.by}</Link>
             </div>
 
             <div className="post-comment left">
-              <Link to="#">{this.state.descendants} comments</Link>
+              {/* <Link to={`/${this.state.id}`}>{this.state.descendants} comments</Link> */}
+               <Link to={{
+                          pathname: `${this.state.data.id}`,
+                          state: {
+                            data: this.state.data
+                          }
+                        }}>{this.state.data.descendants} comments</Link>
+              
             </div>
           </div>
         </div>

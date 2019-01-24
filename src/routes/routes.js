@@ -1,5 +1,6 @@
 const ROUTES = {
-  ROOT: '/'
+  ROOT: '/',
+  ITEM: '/item/'
 };
 
 export default ROUTES;
