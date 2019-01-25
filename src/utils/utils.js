@@ -17,5 +17,5 @@ export /**
  * @returns
  */
 const getShowStoryList = (array, pageNumber) => {
-  return array.slice(pageNumber * 30, (pageNumber + 1) * 30);
+  return array.slice(pageNumber * 25, (pageNumber + 1) * 25);
 };

@@ -25,7 +25,7 @@ class TopStories extends Component {
     this.state = {
       allStoryIdList: [],
       showStoryIdList: [],
-      currentPageNumber: 0
+      currentPage: 0
     };
   }
 
@@ -44,19 +44,55 @@ class TopStories extends Component {
   };
 
   /**
+   * @memberof Home
+   * @param {Number} incrementFactor
+   */
+  handleUpdate = incrementFactor => {
+    let currentPageNumber = this.state.currentPage;
+    currentPageNumber = currentPageNumber + incrementFactor;
+    this.setState(
+      {
+        currentPage: currentPageNumber
+      },
+      () => {
+        this.setState({
+          showStoryIdList: getShowStoryList(this.state.allStoryIdList, this.state.currentPage)
+        });
+      }
+    );
+  };
+
+  /**
    *
    *
    * @returns {object}
    * @memberof TopStories
    */
   render() {
+    const CHANGE_PAGE_STATE = 1;
+
     return (
       <div>
+        <div className="pagination-btn ">
+          <button
+            disabled={this.state.currentPage === 0 || this.state.currentPage < 0 ? true : false}
+            onClick={() => this.handleUpdate(-CHANGE_PAGE_STATE)}
+            className="btn-left left "
+          >
+            ◀
+          </button>
+          <span className="page-number ">
+            {this.state.currentPage+1}
+          </span>
+          <button onClick={() => this.handleUpdate(CHANGE_PAGE_STATE)} className="btn-right right ">
+            ▶
+          </button>
+        </div>
         {!this.state.showStoryIdList.length ? (
           <Spinner />
         ) : (
           this.state.showStoryIdList.map((storyId, index) => {
-            return <ListItem key={storyId} position={getPosition(index, this.state.currentPageNumber)} id={storyId} />;
+            return <ListItem key={storyId} position={getPosition(index, this.state.currentPage)} id={storyId} />;
           })
         )}
       </div>
