@@ -1,14 +1,14 @@
 {
-  "main.css": "/hacker-news/static/css/main.11d64650.chunk.css",
-  "main.js": "/hacker-news/static/js/main.56755195.chunk.js",
-  "main.js.map": "/hacker-news/static/js/main.56755195.chunk.js.map",
+  "main.css": "/hacker-news/static/css/main.20a40b42.chunk.css",
+  "main.js": "/hacker-news/static/js/main.e8210373.chunk.js",
+  "main.js.map": "/hacker-news/static/js/main.e8210373.chunk.js.map",
   "static/js/1.1e3b6613.chunk.js": "/hacker-news/static/js/1.1e3b6613.chunk.js",
   "static/js/1.1e3b6613.chunk.js.map": "/hacker-news/static/js/1.1e3b6613.chunk.js.map",
   "runtime~main.js": "/hacker-news/static/js/runtime~main.a4afb314.js",
   "runtime~main.js.map": "/hacker-news/static/js/runtime~main.a4afb314.js.map",
   "static/media/App.css": "/hacker-news/static/media/bariol_regular-webfont.ceabb18a.woff",
-  "static/css/main.11d64650.chunk.css.map": "/hacker-news/static/css/main.11d64650.chunk.css.map",
+  "static/css/main.20a40b42.chunk.css.map": "/hacker-news/static/css/main.20a40b42.chunk.css.map",
   "index.html": "/hacker-news/index.html",
-  "precache-manifest.30692fadb305af2fb5929757cea19a0c.js": "/hacker-news/precache-manifest.30692fadb305af2fb5929757cea19a0c.js",
+  "precache-manifest.7d050a7857df028627b75d47561b169b.js": "/hacker-news/precache-manifest.7d050a7857df028627b75d47561b169b.js",
   "service-worker.js": "/hacker-news/service-worker.js"
 }
