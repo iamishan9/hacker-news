@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route , Switch  } from 'react-router-dom';
+import { BrowserRouter as Router,  Route , Switch  } from 'react-router-dom';
 
 import Comment from './Comment';
 import TopStories from './TopStories';
@@ -14,12 +14,14 @@ import '../App.css';
  */
 const Main = () => {
   return (
-    <div className="main ">
-      <Switch>
-        <Route exact path={ROUTES.ROOT} component={TopStories} />
-        <Route path ={"/:id"} component={props => <Comment {...props} />} />
-      </Switch> 
-    </div>
+    <Router basename="/hacker-news">
+      <div className="main ">
+        <Switch>
+          <Route exact path={ROUTES.ROOT} component={TopStories} />
+          <Route path ={"/:id"} component={props => <Comment {...props} />} />
+        </Switch> 
+      </div>
+    </Router> 
   );
 };
 
