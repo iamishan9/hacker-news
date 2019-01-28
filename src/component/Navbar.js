@@ -10,10 +10,11 @@ import '../App.css';
  * @extends {Component}
  */
 class Navbar extends Component {
+
   /**
    *
    *
-   * @returns {object}
+   * @returns
    * @memberof Navbar
    */
   render() {

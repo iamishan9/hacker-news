@@ -4,6 +4,13 @@ import { Redirect, Route } from 'react-router-dom';
 import auth from '../utils/auth';
 import ROUTES from '../routes/routes';
 
+
+/**
+ *
+ *
+ * @param {*}
+ * all
+ */
 export const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}

@@ -24,8 +24,8 @@ class ListItem extends Component {
     super(props);
 
     this.state = {
-      data:{},
-      position:this.props.position,
+      data: {},
+      position: this.props.position,
       idLoaded: false
     };
   }
@@ -37,6 +37,7 @@ class ListItem extends Component {
    */
   componentDidMount = async () => {
     const data = await getItem(this.props.id);
+
     this.setState({
       data,
 
@@ -54,7 +55,6 @@ class ListItem extends Component {
     return !this.state.idLoaded ? (
       <Spinner />
     ) : (
-      
       <div className="post-item clearfix">
         <div className="post-left left clearfix">
           <div className="left post-position">{this.state.position}.</div>
@@ -76,13 +76,16 @@ class ListItem extends Component {
 
             <div className="post-comment left">
               {/* <Link to={`/${this.state.id}`}>{this.state.descendants} comments</Link> */}
-               <Link to={{
-                          pathname: `${this.state.data.id}`,
-                          state: {
-                            data: this.state.data
-                          }
-                        }}>{this.state.data.descendants} comments</Link>
-              
+              <Link
+                to={{
+                  pathname: `${this.state.data.id}`,
+                  state: {
+                    data: this.state.data
+                  }
+                }}
+              >
+                {this.state.data.descendants} comments
+              </Link>
             </div>
           </div>
         </div>
@@ -96,4 +99,3 @@ ListItem.propTypes = {
 };
 
 export default ListItem;
-

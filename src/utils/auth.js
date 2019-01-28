@@ -1,18 +1,45 @@
+/**
+ *
+ *
+ * @class Auth
+ */
 class Auth {
+  /**
+   * 
+   * @memberof Auth
+   */
   constructor() {
     this.authenticated = false;
   }
 
+  /**
+   *
+   *
+   * @param {*} cb
+   * @memberof Auth
+   */
   login(cb) {
     this.authenticated = true;
     cb();
   }
 
+  /**
+   *
+   *
+   * @param {*} cb
+   * @memberof Auth
+   */
   logout(cb) {
     this.authenticated = false;
     cb();
   }
 
+  /**
+   *
+   *
+   * @returns
+   * @memberof Auth
+   */
   isAuthenticated() {
     return this.authenticated;
   }

@@ -38,6 +38,10 @@ export const STORY_TYPE = {
 };
 
 
+/**
+ * @param {*} commentId
+ * @returns
+ */
 export async function getComments( commentId) {
   const newsData = await axios.get(`${BASE_URL}item/${commentId}.json`);
 

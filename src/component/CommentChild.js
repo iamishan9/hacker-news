@@ -41,6 +41,12 @@ class CommentChild extends Component {
     }
   };
 
+  /**
+   *
+   *
+   * @returns
+   * @memberof CommentChild
+   */
   render() {
     const { data } = this.props;
 

@@ -49,6 +49,7 @@ class TopStories extends Component {
    */
   handleUpdate = incrementFactor => {
     let currentPageNumber = this.state.currentPage;
+
     currentPageNumber = currentPageNumber + incrementFactor;
     this.setState(
       {
@@ -82,7 +83,7 @@ class TopStories extends Component {
             ◀
           </button>
           <span className="page-number ">
-            {this.state.currentPage+1}
+            {this.state.currentPage + 1}
           </span>
           <button onClick={() => this.handleUpdate(CHANGE_PAGE_STATE)} className="btn-right right ">
             ▶

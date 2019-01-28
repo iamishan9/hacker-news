@@ -3,6 +3,12 @@ import React from 'react';
 import ROUTES from '../routes/routes';
 import auth from '../utils/auth';
 
+/**
+ *
+ *
+ * @param {*} props
+ * @returns
+ */
 export const LoginPage = props => {
   return (
     <div className="login-button">
