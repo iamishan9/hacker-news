@@ -5,7 +5,7 @@
  * @returns {number}
  */
 export const getPosition = (index, pageNumber) => {
-  return index + 1 + pageNumber * 30;
+  return index + 1 + pageNumber * 25;
 };
 
 

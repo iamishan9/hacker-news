@@ -180,3 +180,9 @@ button {
   font-size: 50px;
   font-weight: bold;
 }
+
+.login-button{
+  padding: 50px 50px;
+  text-align: center;
+  color: white;
+}
