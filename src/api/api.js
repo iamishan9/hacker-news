@@ -33,17 +33,16 @@ export const getItem = id => {
     });
 };
 
-export const STORY_TYPE = {
-  TOP_STORIES: 'topstories'
-};
-
-
 /**
  * @param {*} commentId
  * @returns
  */
-export async function getComments( commentId) {
+export async function getComments(commentId) {
   const newsData = await axios.get(`${BASE_URL}item/${commentId}.json`);
 
   return Promise.resolve(newsData);
 }
+
+export const STORY_TYPE = {
+  TOP_STORIES: 'topstories'
+};
