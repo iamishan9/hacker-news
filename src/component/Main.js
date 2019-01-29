@@ -6,7 +6,7 @@ import { LoginPage } from './LoginPage';
 import TopStories from './TopStories';
 
 import ROUTES from '../routes/routes';
-import { PrivateRoute } from './PrivateRoute';
+import { PrivateRoute } from '../routes/PrivateRoute';
 
 import '../App.css';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 
 import auth from '../utils/auth';
-import ROUTES from '../routes/routes';
+import ROUTES from './routes';
 
 
 /**

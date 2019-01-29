@@ -5,7 +5,7 @@
  */
 class Auth {
   /**
-   * 
+   *
    * @memberof Auth
    */
   constructor() {
@@ -20,17 +20,6 @@ class Auth {
    */
   login(cb) {
     this.authenticated = true;
-    cb();
-  }
-
-  /**
-   *
-   *
-   * @param {*} cb
-   * @memberof Auth
-   */
-  logout(cb) {
-    this.authenticated = false;
     cb();
   }
 

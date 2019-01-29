@@ -23,13 +23,7 @@ a {
   max-width: 85%;
   margin: 10px auto 0px auto;
 }
-@media only screen and (max-width: 768px) {
-  .app-container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0px auto 0px auto;
-  }
-}
+
 .clearfix::before,
 .clearfix::after {
   content: '';
@@ -79,7 +73,9 @@ a {
   display: table-row;
   width: 51.28px;
 }
-
+.post-right {
+  word-wrap: break-word;
+}
 .post-title {
   font-size: 10pt;
   padding-right: 5px;
@@ -126,16 +122,16 @@ a {
   justify-content: center;
 }
 
-.story-comment-title{
+.story-comment-title {
   padding-top: 10px;
   text-align: center;
-  color:white;
+  color: white;
   font-size: 30px;
   font-weight: bold;
 }
 
-.story-time{
-  color:white;
+.story-time {
+  color: white;
   margin-left: 2%;
   padding-left: 5px;
   border-left: 2px solid white;
@@ -148,11 +144,10 @@ a {
   padding-bottom: 5px;
   border-left: 2px solid white;
   color: white;
-  
 }
 
 .comment-list:hover {
-  border-left: 2px solid #4285F4;
+  border-left: 2px solid #4285f4;
 }
 
 .child-comment {
@@ -160,7 +155,7 @@ a {
 }
 
 button {
-  background: #4285F4;
+  background: #4285f4;
   border: none;
   font-size: 1rem;
   font-weight: 300;
@@ -169,20 +164,29 @@ button {
   color: #fff;
 }
 
-.pagination-btn{
+.pagination-btn {
   padding: 5px 0;
   text-align: center;
 }
 
-.page-number{
+.page-number {
   text-align: center;
   color: white;
   font-size: 50px;
   font-weight: bold;
 }
 
-.login-button{
+.login-button {
   padding: 50px 50px;
   text-align: center;
   color: white;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .app-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0px auto 0px auto;
+  }
 }
